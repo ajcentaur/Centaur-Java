@@ -7,7 +7,7 @@ package com.ajcentaur.design.pattern;
  * @description: 懒汉式单例
  */
 public class Singleton2 {
-    private static Singleton2 instance;
+    private static volatile Singleton2 instance = null;
 
     private Singleton2() {}
 
@@ -34,10 +34,10 @@ public class Singleton2 {
 //    }
 
     /**
-     * 双重加锁版本
+     * 双重判断版本
      * @return
      */
-    public static synchronized Singleton2 getInstance(){
+    public static Singleton2 getInstance(){
         if(instance == null){
             //同步代码块
             synchronized (Singleton2.class){
