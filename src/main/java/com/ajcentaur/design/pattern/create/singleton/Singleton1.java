@@ -1,4 +1,4 @@
-package com.ajcentaur.design.pattern;
+package com.ajcentaur.design.pattern.create.singleton;
 
 /**
  * @version 1.0.0
