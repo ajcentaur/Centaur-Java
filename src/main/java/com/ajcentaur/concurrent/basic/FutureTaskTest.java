@@ -1,4 +1,4 @@
-package com.ajcentaur.concurrent;
+package com.ajcentaur.concurrent.basic;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
