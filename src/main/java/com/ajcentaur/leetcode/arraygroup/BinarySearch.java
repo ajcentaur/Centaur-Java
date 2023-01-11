@@ -6,7 +6,8 @@ public class BinarySearch {
 //        System.out.println(search704two(new int[]{-1,0,3,5,9,12},13));
 //        System.out.println(searchInsert(new int[]{1,3,5,6},4));
 //        System.out.println(searchRange(new int[]{1,2,2,3,3,3,6},3));
-        System.out.println(mySqrt(22222));
+//        System.out.println(mySqrt(22222));
+        System.out.println(isPerfectSquare(5));
     }
 
     /**
@@ -139,6 +140,31 @@ public class BinarySearch {
             }
         }
         return right;
+    }
+
+    /**
+     * leetcode:367
+     * @param num
+     * @return
+     */
+    public static boolean isPerfectSquare(int num) {
+        if(num == 1 || num == 0){
+            return true;
+        }
+        int left = 1;
+        int right = num / 2;
+        while(left <= right){
+            int mid = left + (right - left) / 2;
+            int val = num / mid;
+            if(mid > val){
+                right = mid - 1;
+            }else if(mid < val) {
+                left = mid + 1;
+            }else{
+                return num % mid == 0 ? true : false;
+            }
+        }
+        return false;
     }
 
 }
