@@ -5,7 +5,8 @@ public class BinarySearch {
 //        System.out.println(search704(new int[]{5},5));
 //        System.out.println(search704two(new int[]{-1,0,3,5,9,12},13));
 //        System.out.println(searchInsert(new int[]{1,3,5,6},4));
-        System.out.println(searchRange(new int[]{1,2,2,3,3,3,6},3));
+//        System.out.println(searchRange(new int[]{1,2,2,3,3,3,6},3));
+        System.out.println(mySqrt(22222));
     }
 
     /**
@@ -111,6 +112,33 @@ public class BinarySearch {
             rightIndex++;
         }
         return new int[]{leftIndex, rightIndex};
+    }
+
+    /**
+     * leetcode:69
+     * @param x
+     * @return
+     */
+    public static int mySqrt(int x) {
+        if(x == 0 || x == 1){
+            return x;
+        }
+        //x的平方根的区间一定在x/2以内
+        int left = 1;
+        int right = x / 2;
+        while(left <= right){
+            int mid = left + (right - left) / 2;
+            //用除法防止int的值溢出
+            int val = x / mid;
+            if(mid > val){
+                right = mid - 1;
+            }else if(mid < val){
+                left = mid + 1;
+            }else{
+                return mid;
+            }
+        }
+        return right;
     }
 
 }
