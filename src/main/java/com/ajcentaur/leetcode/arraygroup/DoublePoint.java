@@ -1,5 +1,8 @@
 package com.ajcentaur.leetcode.arraygroup;
 
+/**
+ * 双指针
+ */
 public class DoublePoint {
     public static void main(String[] args) {
         System.out.println(removeElement(new int[]{0,1,2,2,3,0,4,2},2));

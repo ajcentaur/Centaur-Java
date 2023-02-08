@@ -1,5 +1,8 @@
 package com.ajcentaur.leetcode.arraygroup;
 
+/**
+ * 二分查找
+ */
 public class BinarySearch {
     public static void main(String[] args) {
 //        System.out.println(search704(new int[]{5},5));

@@ -3,6 +3,9 @@ package com.ajcentaur.leetcode.arraygroup;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 滑动窗口
+ */
 public class SlidingWindow {
     public static void main(String[] args) {
 //        System.out.println(totalFruit(new int[]{3,3,3,1,2,1,1,2,3,3,4}));
