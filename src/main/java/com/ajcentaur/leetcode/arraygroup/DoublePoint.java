@@ -21,31 +21,4 @@ public class DoublePoint {
         }
         return slow;
     }
-
-    /**
-     * leetcode:209
-     * @param target
-     * @param nums
-     * @return
-     */
-    public int minSubArrayLen(int target, int[] nums) {
-        int sum = 0;
-        int left = 0;
-        int right = 0;
-        int result = nums.length + 1;
-        while(right < nums.length){
-            sum += nums[right];
-            while(sum >= target){
-                int curVal = right - left + 1;
-                result = result > curVal ? curVal : result;
-                sum -= nums[left];
-                left++;
-            }
-            right++;
-        }
-        if(result > nums.length){
-            return 0;
-        }
-        return result;
-    }
 }
