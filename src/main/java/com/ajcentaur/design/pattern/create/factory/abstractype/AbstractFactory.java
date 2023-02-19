@@ -14,10 +14,16 @@ public class AbstractFactory {
     }
 }
 
+/**
+ * 抽象产品
+ */
 interface Phone{
     void print();
 }
 
+/**
+ * 实际产品
+ */
 class ApplePhone implements Phone {
 
     @Override
@@ -34,6 +40,9 @@ class HuaWeiPhone implements Phone {
     }
 }
 
+/**
+ * 抽象产品
+ */
 interface Mask{
     void print();
 }
@@ -54,11 +63,17 @@ class SampleMask implements Mask {
     }
 }
 
+/**
+ * 抽象工厂
+ */
 interface Factory{
     Phone createPhone();
     Mask createMask();
 }
 
+/**
+ * 实际工厂
+ */
 class SuperFactory implements Factory {
 
     @Override
