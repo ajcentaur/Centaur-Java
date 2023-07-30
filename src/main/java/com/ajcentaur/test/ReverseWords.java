@@ -1,9 +1,8 @@
 package com.ajcentaur.test;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Queue;
+import sun.security.util.ArrayUtil;
+
+import java.util.*;
 
 /**
  * @version 1.0.0
@@ -13,6 +12,10 @@ import java.util.Queue;
  */
 public class ReverseWords {
     public static void main(String[] args) {
+        Vector s = new Vector(5);
+        s.remove(0);
+        ArrayList t = new ArrayList(5);
+        t.remove(0);
 //        System.out.println(reverseWords("  hello world  "));
         System.out.println(maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7},3));
     }

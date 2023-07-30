@@ -34,13 +34,13 @@ public class JavaTest {
 //        a.set(5,1);
         double lon = 120.254046;
         double lat = 30.237788;
-        Double[] a = new Double[]{120.251422,30.238501};
+        Double[] a0 = new Double[]{120.251422,30.238501};
         Double[] a1 = new Double[]{120.253217,30.234206};
         Double[] a2 = new Double[]{120.250348,30.225197};
         Double[] a3 = new Double[]{120.193022,30.256562};
         List<Double[]> list = new ArrayList<>();
         list.add(a3);
-        list.add(a);
+        list.add(a0);
         list.add(a1);
         list.add(a2);
         sortByDistance(lon,lat,list);
