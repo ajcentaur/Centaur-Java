@@ -1,4 +1,4 @@
-package com.ajcentaur.concurrent;
+package com.ajcentaur.concurrent.demo;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

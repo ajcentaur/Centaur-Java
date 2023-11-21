@@ -1,7 +1,10 @@
 package com.ajcentaur.leetcode.hashgroup;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
+
 
 /**
  * @author luocb
@@ -21,6 +24,7 @@ public class SimpleDemo {
      */
     public static boolean isHappy(int n) {
         Set<Integer> record = new HashSet<>();
+        int[] a = new int[2];
         while (n != 1 && !record.contains(n)) {
             record.add(n);
             n = getNextNumber(n);

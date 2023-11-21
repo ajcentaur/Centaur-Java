@@ -1,4 +1,4 @@
-package com.ajcentaur.concurrent;
+package com.ajcentaur.concurrent.demo;
 
 import java.util.concurrent.Semaphore;
 

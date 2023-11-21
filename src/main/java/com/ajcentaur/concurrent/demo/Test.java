@@ -1,4 +1,4 @@
-package com.ajcentaur.concurrent;
+package com.ajcentaur.concurrent.demo;
 
 import java.text.MessageFormat;
 
