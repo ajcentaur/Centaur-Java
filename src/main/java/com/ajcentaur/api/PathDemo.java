@@ -1,4 +1,4 @@
-package com.ajcentaur.api.demo;
+package com.ajcentaur.api;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class PathInfoDemo {
+public class PathDemo {
     static void show(String id, Object obj){
         System.out.println(id + obj);
     }
