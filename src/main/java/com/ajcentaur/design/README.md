@@ -1,4 +1,4 @@
-#设计模式
+# 设计模式
 singleton-单例模式：<br/>  
     Singleton1：饿汉式  
     Singleton2：懒汉式  
