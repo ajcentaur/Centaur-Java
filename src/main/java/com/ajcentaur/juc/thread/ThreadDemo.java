@@ -7,11 +7,11 @@ import java.util.Random;
 public class ThreadDemo {
 
     public static void main(String[] args) {
-//        canStopLogic();
+        canStopLogic();
 
 //        notStopFuncLogic();
 
-        notStopFuncLogic2();
+//        notStopFuncLogic2();
     }
 
     private static void canStopLogic(){
@@ -19,16 +19,21 @@ public class ThreadDemo {
         System.out.println("启动第一个线程");
         Thread thread = new Thread(runnable);
         thread.start();
-        System.out.println("启动第二个线程");
-        Thread thread2 = new Thread(runnable);
-        thread2.start();
         try {
-            Thread.sleep(5000);
+            thread.join();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(String.format("中止线程：%s", thread.getName()));
-        thread.interrupt();
+        System.out.println("启动第二个线程");
+        Thread thread2 = new Thread(runnable);
+        thread2.start();
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        System.out.println(String.format("中止线程：%s", thread.getName()));
+//        thread.interrupt();
     }
 
     static class BasicRunnable implements Runnable{
