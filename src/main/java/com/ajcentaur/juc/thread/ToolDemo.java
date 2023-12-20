@@ -12,8 +12,9 @@ public class ToolDemo {
     public static void main(String[] args) throws InterruptedException {
 //        threadJoinTest();
 //        countDownLatchTest();
-        cyclicBarrierTest();
+//        cyclicBarrierTest();
 //        cyclicBarrierBankTest();
+        semaphoreTest();
     }
 
     private static void threadJoinTest() throws InterruptedException {
@@ -78,8 +79,10 @@ public class ToolDemo {
         Thread thread2 = new Thread(runnable);
         thread1.start();
         thread2.start();
-        //CyclicBarrier的计数器可以循环使用
+        //CyclicBarrier的计数器可以循环使用, 当计数器为0后，执行等待的所有线程，执行结束后，会初始化计数器
         Thread thread3 = new Thread(runnable);
+        thread3.start();
+        Thread thread4 = new Thread(runnable);
         thread3.start();
         //不会阻塞主线程
         System.out.println("all thread finish");
@@ -107,6 +110,30 @@ public class ToolDemo {
         for (int i = 0; i < 5; i++) {
             executor.execute(valueRun);
         }
+        executor.shutdown();
+    }
+
+    private static void semaphoreTest(){
+        //声明5个许可证
+        Semaphore semaphore = new Semaphore(5);
+        ExecutorService executor = Executors.newFixedThreadPool(30);
+        for (int i = 0; i < 30; i++) {
+            executor.execute(()->{
+                try {
+                    //获取许可证，获取不到许可证则阻塞
+                    semaphore.acquire();
+                    System.out.printf("任务被调用，当前调用线程为%s%n", Thread.currentThread());
+                    Thread.sleep(5000);
+                    System.out.printf("线程%s调用已经结束%n", Thread.currentThread());
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                //归还许可证
+                semaphore.release();
+            });
+        }
+        executor.shutdown();
+        System.out.println("all thread finish");
     }
 
 }
