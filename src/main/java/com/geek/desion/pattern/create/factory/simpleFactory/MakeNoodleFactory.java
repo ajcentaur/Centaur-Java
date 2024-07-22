@@ -2,7 +2,7 @@ package com.geek.desion.pattern.create.factory.simpleFactory;
 
 import java.util.Objects;
 
-public class MakeNoodleService {
+public class MakeNoodleFactory {
 
     public void make(Integer number){
         if(Objects.isNull(number)){
@@ -17,7 +17,7 @@ public class MakeNoodleService {
                 noodle = new ItalyNoodle();
                 break;
             default:
-                throw new RuntimeException("无对应内容");
+                throw new RuntimeException("无对应餐品");
         }
         noodle.make();
         noodle.printReceipt();

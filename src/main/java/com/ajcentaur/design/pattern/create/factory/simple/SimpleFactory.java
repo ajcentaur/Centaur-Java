@@ -34,7 +34,7 @@ class ProductA extends Product{
 
     @Override
     public void print() {
-        System.out.println("成产了产品A");
+        System.out.println("生产了产品A");
     }
 }
 
