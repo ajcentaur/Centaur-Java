@@ -1,4 +1,4 @@
-package com.geek.desion.pattern.create.factory.simpleFactory;
+package com.geek.desion.pattern.create.factory.simpleFactory.service;
 
 public class ClientService {
 

@@ -1,4 +1,7 @@
-package com.geek.desion.pattern.create.factory.simpleFactory;
+package com.geek.desion.pattern.create.factory.simpleFactory.service;
+
+import com.geek.desion.pattern.create.factory.simpleFactory.Noodle;
+import com.geek.desion.pattern.create.factory.simpleFactory.NoodleFactory;
 
 import java.util.Objects;
 
