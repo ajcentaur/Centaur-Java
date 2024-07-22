@@ -1,13 +1,8 @@
 package com.geek.desion.pattern.create.factory.simpleFactory;
 
-import java.util.Objects;
+public class NoodleFactory {
 
-public class MakeNoodleFactory {
-
-    public void make(Integer number){
-        if(Objects.isNull(number)){
-            throw new IllegalArgumentException("缺失编号参数");
-        }
+    public static Noodle createNoodle(Integer number){
         Noodle noodle = null;
         switch (number){
             case 1:
@@ -19,8 +14,7 @@ public class MakeNoodleFactory {
             default:
                 throw new RuntimeException("无对应餐品");
         }
-        noodle.make();
-        noodle.printReceipt();
+        return noodle;
     }
 
 }
