@@ -1,6 +1,6 @@
 package com.geek.desion.pattern.create.factory.simpleFactory.service;
 
-import com.geek.desion.pattern.create.factory.simpleFactory.Noodle;
+import com.geek.desion.pattern.create.factory.simpleFactory.model.Noodle;
 import com.geek.desion.pattern.create.factory.simpleFactory.NoodleFactory;
 
 import java.util.Objects;
@@ -12,7 +12,6 @@ public class MakeNoodleService {
             throw new IllegalArgumentException("缺失编号参数");
         }
         Noodle noodle = NoodleFactory.createNoodle(number);
-        noodle.make();
         noodle.printReceipt();
     }
 

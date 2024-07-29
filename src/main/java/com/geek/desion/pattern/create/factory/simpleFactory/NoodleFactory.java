@@ -1,5 +1,9 @@
 package com.geek.desion.pattern.create.factory.simpleFactory;
 
+import com.geek.desion.pattern.create.factory.simpleFactory.model.ChinaNoodle;
+import com.geek.desion.pattern.create.factory.simpleFactory.model.ItalyNoodle;
+import com.geek.desion.pattern.create.factory.simpleFactory.model.Noodle;
+
 public class NoodleFactory {
 
     public static Noodle createNoodle(Integer number){
