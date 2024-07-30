@@ -1,4 +1,4 @@
-package com.ajcentaur.designpattern.create.factory.abstractfactory;
+package com.ajcentaur.designpattern.create.factory.abstractfactory.product;
 
 public class M4A1_Bullet implements Bullet {
     @Override

@@ -1,5 +1,8 @@
 package com.ajcentaur.designpattern.create.factory.abstractfactory;
 
+import com.ajcentaur.designpattern.create.factory.abstractfactory.product.Bullet;
+import com.ajcentaur.designpattern.create.factory.abstractfactory.product.Gun;
+
 public class Test {
 
     public static void main(String[] args){
